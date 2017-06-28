@@ -1,0 +1,34 @@
+# enable color support of ls and also add handy aliases
+if [ "$TERM" != "dumb" ]; then
+    alias grep='grep --color=always'
+    alias fgrep='fgrep --color=always'
+    alias egrep='egrep --color=always'
+    alias pgrep='ps aux|grep $1'
+fi
+
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias lsl='ls -lahF'
+
+# other aliases
+alias shred='shred -uvzn25'
+alias cp='cp -a'
+alias mpg123='mpg123 -C'
+alias rm='rm -i'
+
+# uncripted aliases
+bitrate () {
+      echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
+}
+
+# ntrepid aliases
+alias jmeter='java -jar /Applications/apache-jmeter-2.13/bin/ApacheJMeter.jar'
+alias h2GUI='java -jar ~/.m2/repository/com/h2database/h2/1.4.185/h2-1.4.185.jar'
+alias wrap='tput smam'
+alias nowrap='tput rmam'
+alias shred='gshred -uvzn26'
+
+#alias imgcat='/Users/mark.zanfardino/.iterm2/imgcat'
+#alias it2dl='/Users/mark.zanfardino/.iterm2/it2dl'
